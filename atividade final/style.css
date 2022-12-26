@@ -48,7 +48,6 @@ body {
   }
 
 main {
-    width: 100%;
     margin-left: 20%;
     margin-top: 15%;
 }
@@ -57,9 +56,23 @@ main > h1 {
     font-size: 3em;
 }
 
-h1 > span {
+span {
     color:rgb(255, 68, 0);
 }
 main > p {
     margin-top: 50px;
 }
+
+.skills {
+    font-size: 30px;
+}
+
+.skills h1 {
+    margin-bottom: 50px;
+    color:rgb(206, 55, 0);
+}
+
+.skills li {
+    margin-top: 10px;
+}
+
