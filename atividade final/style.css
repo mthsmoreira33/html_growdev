@@ -30,6 +30,11 @@ body {
     color: white;
 }
 
+#lista-menu li a {
+    text-decoration: none;
+    color: white;
+}
+
 .icones {
     margin-top: 20px;
     width: 70px;
