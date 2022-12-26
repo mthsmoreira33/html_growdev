@@ -32,12 +32,15 @@ body {
 
 .icones {
     margin-top: 20px;
-    width: 60px;
+    width: 70px;
     display: flex;
+    justify-content: center;
+    gap: 5px;
 }
+
 .icones img {
     margin-right: 12px;
-}
+  }
 
 main {
     width: 100%;
