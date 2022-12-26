@@ -1,0 +1,11 @@
+body {
+    background-image: url(white-crumpled-paper-texture-background-design-space-white-tone.jpg);
+    background-size: cover;
+}
+.foto > img {
+    width: 200px;
+    align-items: center;
+    display: block;
+    margin: 50px auto;
+    border: 10px solid rgba(141, 141, 141, 0.253);
+}
