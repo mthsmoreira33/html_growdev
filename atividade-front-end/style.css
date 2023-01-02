@@ -56,6 +56,14 @@ main > h1 {
     font-size: 3em;
 }
 
+h2 > a {
+    text-decoration: none;
+}
+
+h2 > a:active {
+    color:rgb(206, 55, 0);
+}
+
 span {
     color:rgb(255, 68, 0);
 }
