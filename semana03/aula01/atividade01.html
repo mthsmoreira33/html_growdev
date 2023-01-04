@@ -7,7 +7,7 @@
     <title>Atividade 01</title>
     <style>
         table {
-            width: 50%;
+            width: 20%;
             border-collapse: collapse;
         }
 
@@ -15,11 +15,7 @@
             border: 1px solid;
         }
 
-        .first-line-table1 {
-            text-align: left;
-        }
-
-        .sec-line-table1, .sec-line-table2, #three ,.sec-line-table3 {
+        .sec-line-table1, .sec-line-table2, #three, .sec-line-table3 {
             text-align: center;
         }
 
@@ -30,45 +26,45 @@
     </style>
 </head>
 <body>
-    <table width="100%">
-        <tr class="first-line-table1">
+    <table>
+        <tr>
             <td>1</td>
             <td>2</td>
             <td>3</td>
         </tr>
-        <tr class="sec-line-table1">
+        <tr style="text-align: center;">
             <td>4</td>
             <td>5</td>
             <td>6</td>
         </tr>
-        <tr class="third-line-table1">
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-        </tr>
-    </table><br>
-    <table width="100%">
-        <tr class="first-line-table2">
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-        <tr class="sec-line-table2">
-            <td colspan="3">4</td>
-        </tr>
-        <tr class="third-line-table2">
+        <tr style="text-align: right;">
             <td>7</td>
             <td>8</td>
             <td>9</td>
         </tr>
     </table><br>
     <table>
-        <tr class="first-line-table3">
+        <tr>
             <td>1</td>
             <td>2</td>
-            <td id="three" rowspan="3">3</td>
+            <td>3</td>
         </tr>
-        <tr class="sec-line-table3">
+        <tr style="text-align: center;">
+            <td colspan="3">4</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table><br>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td style="text-align: center;" rowspan="3">3</td>
+        </tr>
+        <tr style="text-align: center;">
             <td colspan="2">4</td>
         </tr>
         <tr class="third-line-table3">
