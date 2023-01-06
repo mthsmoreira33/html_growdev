@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+.cl1 {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+.cl2 {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    background-color: black;
+}
+
+.cl3 {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+}
+
+.cl4 {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    right: 0;
+    background-color: black;
+}

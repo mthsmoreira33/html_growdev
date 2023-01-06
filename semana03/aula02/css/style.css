@@ -1,0 +1,27 @@
+.a {
+    list-style-type: upper-roman;
+}
+
+.b {
+    list-style-type: decimal;
+}
+
+.c {
+    list-style-type: upper-latin;
+}
+.d {
+    list-style-type: lower-greek;
+}
+
+body {
+    margin: 0;
+}
+
+.teste {
+    margin: 0 50%;
+    border: 1px solid black;
+    padding: 40px;
+    width: 50px;
+    height: 30px;
+    background-color: blue;
+}

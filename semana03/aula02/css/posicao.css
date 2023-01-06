@@ -1,0 +1,42 @@
+.estatico {
+    position: static;
+    border: 3px solid seagreen;
+}
+
+.relativo {
+    position: relative;
+    left: 50px;
+    border: 3px solid seagreen;
+}
+
+.fixo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 3px solid seagreen;
+    width: 250px;
+}
+
+.relativo2 {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 3px solid seagreen;
+}
+
+.absoluto {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 150px;
+    height: 100px;
+    border: 3px solid seagreen;
+}
+
+.colado {
+    position: sticky;
+    top: 0;
+    padding: 8px;
+    background-color: blanchedalmond;
+    border: 3px solid seagreen;
+}

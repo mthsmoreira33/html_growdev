@@ -1,0 +1,25 @@
+.c1 {
+    height: 80px;
+    width: 100%;
+    border: 1px solid black;
+}
+.c2 {
+    margin: 30px;
+    padding: 30px;
+    height: 100px;
+    width: 60%;
+    background-color: brown;
+}
+.c3 {
+    margin: 0;
+    background-color: aqua;
+}
+
+#parent { 
+    max-width: 200px;
+    background: gold; 
+}
+
+#child  {
+    width: 800px;
+}
