@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    padding: 8px;
+    width: 90px;
+    background-color: navy;
+    margin-right: 0px;
+    float: left;
+}
+
+li a {
+    color: yellow;
+    text-decoration: none;
+}
+
+li a:hover, li:hover {
+    background-color: yellow;
+    color: navy;   
+}
+

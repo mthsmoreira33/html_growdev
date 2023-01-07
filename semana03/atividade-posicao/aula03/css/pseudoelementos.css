@@ -1,0 +1,25 @@
+p::selection {
+    color: navy;
+    background-color: yellow;
+}
+
+p::first-line {
+    background-color: aqua;
+}
+
+p::first-letter {
+    font-size: 30px;
+}
+
+p::after {
+    content: url('https://media.tenor.com/I04oOeAm7H4AAAAd/fluminense-babibou.gif');
+}
+
+p::before {
+    content: url('https://media.tenor.com/I04oOeAm7H4AAAAd/fluminense-babibou.gif');
+}
+
+::marker {
+    color: red;
+    font-size: 30px;
+}

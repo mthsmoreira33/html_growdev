@@ -1,6 +1,69 @@
-body {
-    margin: 0;
+*{
+    margin:0;
+    padding:0;
 }
 
+div{
+    height:50px;
+    width:50px;
+    background-color: black;
+    position:fixed;
+}
 
+.cl1{
+    top:0;
+    left:0;
+}
 
+.cl2{
+    top:0;
+    left:53px;
+}
+
+.cl3{
+    top:0;
+    left:106px;
+}
+
+.cl4{
+    top:53px;
+}
+
+.cl5{
+    top:53px;
+    left:53px;
+}
+
+.cl6{
+    top:106px;
+}
+
+.cl7{
+    bottom:0;
+    right:0;
+}
+
+.cl8{
+    bottom:0;
+    right:53px;
+}
+
+.cl9{
+    bottom:0;
+    right:106px;
+}
+
+.cl10{
+    bottom:53px;
+    right:0;
+}
+
+.cl11{
+    bottom:53px;
+    right:53px;
+}
+
+.cl12{
+    bottom:106px;
+    right:0;
+}

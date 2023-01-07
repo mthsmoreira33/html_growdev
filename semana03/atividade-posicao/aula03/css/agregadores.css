@@ -1,0 +1,18 @@
+div p {
+    /* Aplica a regra a todos seletores do segundo tipo */
+    color: red;
+}
+div > p {
+    /* Aplica a regra a todos seletores filhos diretos */
+    /* Não aplica a outros seletores além do primeiro */
+    color: navy;
+}
+
+div ~ p {
+    color: purple;
+}
+
+div + p {
+    color: green;
+}
+
