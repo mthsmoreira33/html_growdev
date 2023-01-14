@@ -18,3 +18,7 @@ function helloWorld() {
     console.log('debuggando no JS');
     print();
 }
+
+nome = 'Matheus', sobrenome = 'Moreira', nomeCompleto = nome + ' ' + sobrenome;
+
+console.log(nomeCompleto);
