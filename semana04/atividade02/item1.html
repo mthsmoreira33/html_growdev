@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Variáveis 
+            valor A = 10
+            valor B = 20
+            variável auxiliar = valor A
+            
+            Valor A recebe Valor B
+            Valor B recebe Variável Auxiliar
+
+            Valor A = 20
+            Valor B = 10
+        */
+        let valorA= 10;
+        let valorB = 20;
+        let aux = valorA;
+
+        document.write (`Primeiro valor é ${valorA}, segundo valor é ${valorB}<br>`)
+
+        valorA = valorB, valorB = aux;
+
+        document.write (`Primeiro valor trocou para ${valorA}, segundo valor trocou para ${valorB}`)
+    </script>
+</body>
+</html>

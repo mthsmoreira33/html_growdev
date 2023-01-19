@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const velocidade = 84;
+        const velocidadePermitida = 80;
+        const multa = (velocidade - velocidadePermitida) * 5;
+
+
+        if (velocidade > velocidadePermitida) {
+            document.write(`Você ultrapassou ${velocidade - velocidadePermitida} km da velocidade permitida, sua multa é de R$ ${multa}`)
+        }
+    </script>
+</body>
+</html>

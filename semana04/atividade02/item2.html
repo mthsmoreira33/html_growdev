@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const votosBrancos = 200;
+        const votosNulos = 700;
+        const votosValidos = 10000;
+        const totalEleitores = votosBrancos + votosNulos + votosValidos;
+        const percentBrancos = votosBrancos / totalEleitores *  100, percentNulos = votosNulos / totalEleitores * 100, percentValidos = votosValidos / totalEleitores * 100;
+
+        document.write(`A cidade de São Tomé na última eleição teve  ${totalEleitores} eleitores aptos, ${percentValidos}% votos válidos, ${percentBrancos}% votos brancos e ${percentNulos}% votos nulos`)
+
+    </script>
+</body>
+</html>

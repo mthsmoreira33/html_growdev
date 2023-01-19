@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const salarioFixo = 1500;
+        const carrosVendidos = 5;
+        const comissaoFixa = 200 * carrosVendidos;
+        const totalVendas = 25000;
+        const comissao = totalVendas * 0.05;
+
+        const rendaMensal = salarioFixo + comissaoFixa + comissao;
+
+        document.write(`O salário fixo é R$${salarioFixo}, a comissão fixa é de R$${comissaoFixa}, a comissão mensal foi de R$${comissao} e a renda mensal foi de R$${rendaMensal}`);
+    </script>   
+</body>
+</html>
