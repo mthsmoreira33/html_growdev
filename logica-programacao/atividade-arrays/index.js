@@ -21,19 +21,21 @@ function item02() {
 
 function item03() {
     let lista = [];
+
     for (i = 1; lista.length < 4; i++) {
-        let soma = 0;
+        let somaDivisores = 0;
         for (contador = 1; contador < i; contador++) {
             if (i % contador === 0) {
-                soma += contador;
+             somaDivisores += contador;
             }
         }
-        if (soma === i) {
+        if (somaDivisores === i) {
             lista.push(i);
         }
     }
     console.log(lista);   
 }
+
 
 
 function item04(lista1, lista2) {
