@@ -52,26 +52,44 @@ function item04(segundos) {
 
 function item05(num) {
     let soma = 0;
-    for (i=1; i < num; i++) {
+
+    for (i = 1; i <= num / 2; i++) {
         if (num % i === 0) {
-            soma += i;
+        soma += i;
         }
     }
     if (soma === num) {
         return true;
-
     } else {
         return false;
     }
 }
 
-function item06(){
+
+
+function acessoAoSite(){
     alert('Bem vindo ao site');
 }
+acessoAoSite();
 
-function item07(){
+function mostrarMensagem(){
     const aplicacao = 'Teste 01';
-    console.log(`Entrando na aplicação ${aplicacao}`);
-    alert(`Bem-vindo ao ${aplicacao}`)
+    console.log(`Acesso à aplicação ${aplicacao}`);
+    alert(`Bem-vindo à ${aplicacao}`);
 }
 
+mostrarMensagem();
+
+function mostrarDobro(num) {
+    console.log(`O dobro do número ${num} é ${num * 2}`);
+}
+
+function calcularMedia (nota1, nota2, nota3, nome) {
+    if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+        alert('O valor digitado não é um número');
+    } else {
+        const media = (nota1 + nota2 + nota3) / 3;
+        alert(`${nome}, a sua média de notas é: ${media.toFixed(2)}`);
+        console.log(`Nota 1: ${nota1}, Nota 2: ${nota2}, Nota 3: ${nota3}`)
+    }
+}
