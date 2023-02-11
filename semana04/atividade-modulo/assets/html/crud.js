@@ -1,87 +1,87 @@
-let dataList = [];
+let listaDados = [];
 
-// Check if there is any data in local storage and load it
-if (localStorage.getItem("dataList")) {
-  dataList = JSON.parse(localStorage.getItem("dataList"));
-  renderDataList();
+//Verifica se há dados no local storage e carrega
+if (localStorage.getItem('listaDados')) {
+  listaDados = JSON.parse(localStorage.getItem('listaDados'));
+  renderizaLista();
 }
 
-// Add a new data to the list
-function addData() {
-  let input = document.getElementById("input-field");
-  let newData = input.value;
-  input.value = "";
-  dataList.push(newData);
-  renderDataList();
-  saveDataList();
+// Adiciona novos dados à lista
+function addDados() {
+  let input = document.getElementById('input-field');
+  let dadoNovo = input.value;
+  input.value = '';
+  listaDados.push(dadoNovo);
+  renderizaLista();
+  salvaLista();
 }
 
-// Remove a data from the list
-function removeData(index) {
-  dataList.splice(index, 1);
-  renderDataList();
-  saveDataList();
+// Remove dados da lista
+function removeDados(index) {
+  listaDados.splice(index, 1);
+  renderizaLista();
+  salvaLista();
 }
 
-// Update a data in the list
-function updateData(index) {
-  let newValue = prompt("Enter the new data:");
-  dataList[index] = newValue;
-  renderDataList();
-  saveDataList();
+// Atualiza dados na lista
+function atualizaDados(index) {
+  let valorAtualizado = prompt('Enter the new dado:');
+  listaDados[index] = valorAtualizado;
+  renderizaLista();
+  salvaLista();
 }
 
-// Render the data list on the page
-function renderDataList() {
-  let tableBody = document.getElementById("table-body");
-  tableBody.innerHTML = "";
-  for (let i = 0; i < dataList.length; i++) {
-    let data = dataList[i];
-    let row = document.createElement("tr");
-    let dataCell = document.createElement("td");
-    dataCell.innerHTML = data;
-    let actionsCell = document.createElement("td");
-    let updateButton = document.createElement("button");
-    updateButton.innerHTML = "Update";
-    updateButton.addEventListener("click", function() {
-      updateData(i);
+// Renderiza dados da lista
+function renderizaLista() {
+  let tableBody = document.getElementById('table-body');
+  tableBody.innerHTML = '';
+  for (let i = 0; i < listaDados.length; i++) {
+    let dado = listaDados[i];
+    let linha = document.createElement('tr');
+    let celula = document.createElement('td');
+    celula.innerHTML = dado;
+    let acoes = document.createElement('td');
+    let botaoAtualizar = document.createElement('button');
+    botaoAtualizar.innerHTML = 'Update';
+    botaoAtualizar.addEventListener('click', function() {
+      atualizaDados(i);
     });
-    let removeButton = document.createElement("button");
-    removeButton.innerHTML = "Remove";
-    removeButton.addEventListener("click", function() {
-      removeData(i);
+    let removeButton = document.createElement('button');
+    removeButton.innerHTML = 'Remove';
+    removeButton.addEventListener('click', function() {
+      removeDados(i);
     });
-    actionsCell.appendChild(updateButton);
-    actionsCell.appendChild(removeButton);
-    row.appendChild(dataCell);
-    row.appendChild(actionsCell);
-    tableBody.appendChild(row);
+    acoes.appendChild(botaoAtualizar);
+    acoes.appendChild(removeButton);
+    linha.appendChild(celula);
+    linha.appendChild(acoes);
+    tableBody.appendChild(linha);
   }
 }
 
-// Save the data list to local storage
-function saveDataList() {
-  localStorage.setItem("dataList", JSON.stringify(dataList));
+// Save the dado list to local storage
+function salvaLista() {
+  localStorage.setItem('listaDados', JSON.stringify(listaDados));
 }
 
 // Add event listener to the add button
-let addButton = document.getElementById("add-button");
-addButton.addEventListener("click", addData);
+let addButton = document.getElementById('add-button');
+addButton.addEventListener('click', addDados);
 
 // Add event listener to the input field
-let input = document.getElementById("input-field");
-    input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-    addData();
+let input = document.getElementById('input-field');
+    input.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter') {
+    addDados();
     }
 });
 
 
 function logout() {
-  // Remove login data from session storage
-  sessionStorage.removeItem("email");
-  sessionStorage.removeItem("password");
-  // Redirect to login page or show a message
-  window.location.href = "login.html";
+  // Remove dado de login da Session Storage
+  sessionStorage.removeItem('email');
+  sessionStorage.removeItem('password');
+  // Redireciona para página de login
+  window.location.href = 'login.html';
 };
 

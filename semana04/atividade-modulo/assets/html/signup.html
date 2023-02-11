@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup Page</title>
+    <script src="signup.js"></script>
+    <style>
+      form {
+        width: 300px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left-box">
+      
+    </div>
+    <div class="right-box">
+      <form id="signup-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" required>
+        <br>
+        <input type="button" value="Signup" onclick="signup()">
+      </form>
+    </div>
+  </body>
+</html>

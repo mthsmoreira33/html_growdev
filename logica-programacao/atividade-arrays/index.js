@@ -1,6 +1,6 @@
-function item01() {
-    let lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-
+item01([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+function item01(lista) {
+    console.log('Item 01')
     for (i = 0; i < lista.length; i++) {
         if (lista[i] % 2 === 0) {
             console.log(lista[i]);
@@ -8,7 +8,7 @@ function item01() {
     }
 }
 
-function item02() {
+function item02(lista) {
     let lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
     let soma = 0;
 
@@ -36,11 +36,10 @@ function item03() {
     console.log(lista);   
 }
 
-
+item04([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],[10, 20, 30, 40, 50, 60, 70, 80, 90])
 
 function item04(lista1, lista2) {
-    let listaFinal = [lista1 +"," + lista2];
-    listaFinal.toLocaleString();
+    let listaFinal = lista1.concat(lista2)
     console.log(listaFinal);
 }
 
@@ -59,15 +58,9 @@ function item05(lista, num) {
     }
 }
 
+item06(['Matheus', 'Moreira', 'Lima', 'Alessandra', 'Vieira'])
 function item06(nomes){
-    console.log(nomes);
-    const nomesInvertido = [];
-
-    for (i = 1; i <= nomes.length; i++){
-        //Adiciona o último elemento da lista nomes na lista nomesInvertido
-        nomesInvertido.push(nomes[nomes.length - i]);
-    }
-    console.log(nomesInvertido);
+    console.log(nomes.reverse());
 }
 
 
