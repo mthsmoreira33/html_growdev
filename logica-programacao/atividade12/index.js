@@ -45,4 +45,6 @@ console.log(`Quantidade de pessoas do sexo feminino: ${data.filter(pessoa => pes
 
 //3. Imprima no console a soma do salário de todas as pessoas.
 
+let soma = 0;
+data.forEach(funcionario => funcionario.salario)
 console.log()
