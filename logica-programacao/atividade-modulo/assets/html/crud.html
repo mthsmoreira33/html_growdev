@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Maynard Systems - Home</title>
 </head>
 <body>
+  <button id="logout-button" onclick="logout()">Logout</button>
   <div id="crud-container">
-    <input type="text" id="input-title" placeholder="Enter title...">
-    <input type="text" id="input-field" placeholder="Anote aqui...">
+    <input type="text" class="input-crud" placeholder="Enter title...">
+    <input type="text" class="input-crud" placeholder="Anote aqui...">
     <button id="add-button">Adicionar</button>
-    <button id="logout-button" onclick="logout()">Logout</button>
     <table id="crud-table">
       <thead>
         <tr>

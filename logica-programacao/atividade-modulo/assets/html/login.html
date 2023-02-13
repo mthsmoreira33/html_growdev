@@ -5,29 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Maynard Systems</title>
-    <style>
-      body {
-        margin: 0;
-      }
-      /* formulários */
-      #login-form {
-        width: 100vw;
-        
-      }
-      
-    </style>
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
-    <form id="login-form">
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
-      <br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" required>
-      <br>
-      <input type="button" value="Login" onclick="login()">
-    </form>
-
+    <div class="main-box">
+      <div class="left-box">
+        <h1 class="texto">Entre para ver ou adicionar seus recados!</h1>
+      </div>
+      <div class="right-box">
+        <form id="form-box">
+          <h1 class="texto">Login</h1>
+          <div class="text-field">
+            <label for="email" class="texto">Email:</label>
+            <input type="email" id="email" required>
+          </div>
+          <br>
+          <div class="text-field">
+            <label for="password" class="texto">Senha:</label>
+            <input type="password" id="password" required>
+          </div>
+          <br>
+          <input type="button" value="Login" id="btn" onclick="login()">
+          <div class="texto nao-cadastrado">Não está cadastrado? Clique <a href="signup.html">aqui</a> para cadastrar.</div>
+        </form>
+      </div>
+    </div>
     <script src="login.js">
     </script>
   </body>

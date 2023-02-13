@@ -103,14 +103,6 @@ function salvaLista() {
 let botaoAdicionar = document.getElementById('add-button');
 botaoAdicionar.addEventListener('click', addDados);
 
-// Adiciona event listener no campo de input caso o usuario digite Enter
-let input = document.getElementById('input-field');
-input.addEventListener('keyup', function(event) {
-  if (event.key === 'Enter') {
-  addDados();
-  }
-});
-
 
 function logout() {
   // Remove dado de login da Session Storage
