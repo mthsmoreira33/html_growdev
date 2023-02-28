@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: blue;
+    width: 100%;
+    padding: 10px;
+}
+
+.menu {
+    display: inline-block;
+}
+
+.menu input {
+    border-radius: 10px;
+    border-style: none;
+    height: 20px;
+}
+
+#add {
+    background-color: brown;
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
+    border-style: none;
+    width: 30px;
+    height: 25px;
+}
+
+.botoes {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.botoes button {
+    padding: 10px;
+    background-color: brown;
+    color: white;
+    border-style: none;
+    border-radius: 20px;
+}
+
+#main {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding-right: 20px;
+}

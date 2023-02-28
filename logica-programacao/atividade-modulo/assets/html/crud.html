@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Maynard Systems - Home</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anotações</title>
+  <link rel="stylesheet" href="../css/crud.css">
 </head>
 <body>
-  <button id="logout-button" onclick="logout()">Logout</button>
-  <div id="crud-container">
-    <input type="text" class="input-crud" placeholder="Enter title...">
-    <input type="text" class="input-crud" placeholder="Anote aqui...">
-    <button id="add-button">Adicionar</button>
-    <table id="crud-table">
+  <header id="header">
+    <div class="menu">
+      <input type="text">
+      <input type="text">
+      <button id="add">+</button>
+    </div>
+    <div class="botoes">
+      <button id="zerar">-</button>
+      <button id="logout">L</button>
+    </div>
+  </header>
+  <main id="main">
+    <table>
       <thead>
         <tr>
-          <th>Título</th>
-          <th>Anotações</th>
+          <th>Titulo</th>
+          <th>Descrição</th>
           <th>Ações</th>
         </tr>
       </thead>
-      <tbody id="table-body"></tbody>
+      <tbody>
+        <tr>
+          <td>Teste</td>
+          <td>Teste</td>
+          <td>Teste</td>
+        </tr>
+      </tbody>
     </table>
-  </div>
-  <script src="./crud.js"></script>
+  </main>
 </body>
 </html>

@@ -1,4 +1,4 @@
-function login() {
+document.getElementById('btn').addEventListener('click', () => {
   // Pega valores dos forms
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
@@ -9,11 +9,11 @@ function login() {
     let users = JSON.parse(localStorage.getItem('users')) || [];
     // Verifica se email e senha estão no local storage
     let userExiste = users.some(user => user.email === email && user.password === password);
-  if (userExiste) {
-    alert('Bem vindo de volta!');
-    window.location.href = 'crud.html';
-  } else {
-    alert('Email ou senhas incorretos');
+    if (userExiste) {
+      alert('Bem vindo de volta!');
+      window.location.href = '../html/crud.html';
+    } else {
+      alert('Email ou senhas incorretos');
+    }
   }
-  }
-}
+})
