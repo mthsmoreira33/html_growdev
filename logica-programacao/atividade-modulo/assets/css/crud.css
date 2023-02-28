@@ -1,59 +1,120 @@
 * {
     margin: 0;
     padding: 0;
+    outline: none;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 #header {
-    background-color: blue;
-    width: 100%;
+    background-color: hsl(120, 60%, 50%);
+    width: auto;
     padding: 10px;
-}
-
-.menu {
-    display: inline-block;
+    box-shadow: 0px 1px 5px 1px hsl(120, 60%, 40%);
 }
 
 .menu input {
-    border-radius: 10px;
+    vertical-align: 50%;
+    margin-left: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 1em;
     border-style: none;
     height: 20px;
 }
 
+.menu input::placeholder {
+    color: hsl(120, 60%, 50%);
+}
+
+.menu input:focus {
+    box-shadow: 0px 3px 8px 1px hsl(120, 60%, 40%);
+}
+
 #add {
-    background-color: brown;
-    color: white;
-    padding: 3px;
-    border-radius: 10px;
+    background-color: hsl(120, 60%, 85%);
+    margin-left: 20px;
+    color: hsl(120, 60%, 20%);
+    font-size: 30px;
+    border-radius: 100%;
     border-style: none;
     width: 30px;
-    height: 25px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .botoes {
+    display: flex;
     position: absolute;
     top: 0;
     right: 0;
 }
 
 .botoes button {
-    padding: 10px;
-    background-color: brown;
-    color: white;
+    background-color: hsl(120, 60%, 85%);
+    color: hsl(120, 60%, 20%);
+    font-size: 30px;
+    width: 48px;
+    height: 48px;
     border-style: none;
-    border-radius: 20px;
-}
-
-#main {
-    margin-top: 20px;
-    margin-left: 30px;
+    border-radius: 1em;
+    cursor: pointer;
+    border-radius: 100%;
 }
 
 table {
-    border: 1px solid black;
-    border-collapse: collapse;
+    border-radius: 1em;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: hsl(120, 60%, 50%);
+    box-shadow: 0px 5px 8px green;
+    color: white;
 }
 
 td, th {
-    border: 1px solid black;
-    padding-right: 20px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+@media (max-width: 626px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .menu input {
+        margin: 10px 0;
+        padding: 5px;
+        z-index: 3;
+    }
+
+    .table {
+        width: auto;
+    }
+    .botoes {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }          
+
+    .botoes button {
+        width: 75px;
+        height: 75px;
+    }
+
+    #add {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 75px;
+        height: 75px;
+        box-sizing: border-box;
+    }
 }
