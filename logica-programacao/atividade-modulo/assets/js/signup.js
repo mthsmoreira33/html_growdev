@@ -1,6 +1,7 @@
 //signup.html
-document.getElementById('btn').addEventListener('click', () =>  {
+document.getElementById('form-box').addEventListener('submit', e => {
   // Armazena valores do signup
+  e.preventDefault();
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
   let confirmPassword = document.getElementById('confirm-password').value;

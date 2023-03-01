@@ -19,7 +19,6 @@ body {
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    background-image: url('../img/Add\ tasks-bro.png');
     background-size: 80%;
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -27,17 +26,17 @@ body {
   }
 
   .left-box h1 {
-    position: relative;
-    top: 15%;
+    display: block;
+    margin-top: 200px;
     color: hsl(120, 60%, 55%);
-    margin-left: 20px;
   }
+  
   .right-box {
     width: 50vw;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: right;
+    align-items: center;
     flex-direction: column;
   }
 
@@ -54,26 +53,32 @@ body {
     font-weight: 800;
   }
 
+  #imgPagina {
+    width: 600px;
+  }
+
+
   .right-box label {
     margin-bottom: 8px;
   }
 
   #form-box {
-    width: 60%;
+    width: 600px;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px 15px;
     background-color: hsl(120, 60%, 65%);
     box-shadow: 0px 5px 5px hsl(120, 60%, 60%);
     border-radius: 50px;
   }
 
   .text-field {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     margin-bottom: 20px;
   }
@@ -93,7 +98,7 @@ body {
     width: 25%;
     margin-top: 10px;
     padding: 8px;
-    background-color: hsl(16, 82%, 52%);
+    background-color: hsl(120, 60%, 35%);
     border-radius: 20px;
     border-style: none;
     cursor: pointer;
@@ -102,12 +107,13 @@ body {
   }
 
   #btn:hover {
-    background-color: hsl(16, 82%, 45%);
-    box-shadow: 0px 5px 2px hsl(16, 82%, 30%);
+    background-color: hsl(120, 60%, 45%);
+    box-shadow: 0px 3px 5px hsl(120, 60%, 55%);
   }
 
 .nao-cadastrado {
   margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 #logout-button {

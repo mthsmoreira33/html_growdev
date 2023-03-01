@@ -1,5 +1,6 @@
-document.getElementById('btn').addEventListener('click', () => {
+document.getElementById('form-box').addEventListener('submit', e => {
   // Pega valores dos forms
+  e.preventDefault();
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
   //Verifica se email ou senha estão vazios
@@ -9,7 +10,8 @@ document.getElementById('btn').addEventListener('click', () => {
     let users = JSON.parse(localStorage.getItem('users')) || [];
     // Verifica se email e senha estão no local storage
     let userExiste = users.some(user => user.email === email && user.password === password);
-    if (userExiste) {
+    
+    if (userExiste) {+
       alert('Bem vindo de volta!');
       window.location.href = '../html/crud.html';
     } else {

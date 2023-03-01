@@ -30,6 +30,7 @@
     box-shadow: 0px 3px 8px 1px hsl(120, 60%, 40%);
 }
 
+
 #add {
     background-color: hsl(120, 60%, 85%);
     margin-left: 20px;
@@ -77,6 +78,10 @@ td, th {
     padding-right: 7vw;
 }
 
+td {
+    width: auto;
+    height: auto;
+}
 @media (max-width: 626px) {
     .menu {
         display: flex;
