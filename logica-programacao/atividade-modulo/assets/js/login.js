@@ -1,21 +1,17 @@
-document.getElementById('form-box').addEventListener('submit', e => {
+document.getElementById('formularioLogin').addEventListener('submit', e => {
   // Pega valores dos forms
   e.preventDefault();
   let email = document.getElementById('email').value;
-  let password = document.getElementById('password').value;
+  let senha = document.getElementById('senha').value;
   //Verifica se email ou senha estão vazios
-  if (email === '' || password === '') {
-    alert('Por favor inserir email ou senha.');
+  let users = JSON.parse(localStorage.getItem('users')) || [];
+  // Verifica se email e senha estão no local storage
+  let userExiste = users.some(user => user.email === email && user.senha === senha);
+  
+  if (userExiste) {+
+    alert('Bem vindo de volta!');
+    window.location.href = '../html/crud.html';
   } else {
-    let users = JSON.parse(localStorage.getItem('users')) || [];
-    // Verifica se email e senha estão no local storage
-    let userExiste = users.some(user => user.email === email && user.password === password);
-    
-    if (userExiste) {+
-      alert('Bem vindo de volta!');
-      window.location.href = '../html/crud.html';
-    } else {
-      alert('Email ou senhas incorretos');
-    }
+    alert('Email ou senhas incorretos');
   }
 })

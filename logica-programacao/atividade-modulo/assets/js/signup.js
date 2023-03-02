@@ -1,22 +1,12 @@
 //signup.html
-document.getElementById('form-box').addEventListener('submit', e => {
+document.getElementById('formularioSignup').addEventListener('submit', e => {
   // Armazena valores do signup
   e.preventDefault();
   let email = document.getElementById('email').value;
-  let password = document.getElementById('password').value;
-  let confirmPassword = document.getElementById('confirm-password').value;
-  
-  if (email === ''){
-    alert('Por favor digite o email');
-    return;
-  }
+  let senha = document.getElementById('senha').value;
+  let confirmarSenha = document.getElementById('confirmarSenha').value;
 
-  if (password === '') {
-    alert('Por favor digite a senha');
-    return;
-  } 
-
-  if (password !== confirmPassword){
+  if (senha !== confirmarSenha){
     alert('Senhas não são iguais!');
     return;
   }
@@ -29,10 +19,13 @@ document.getElementById('form-box').addEventListener('submit', e => {
     alert('E-mail já está cadastrado!');
     window.location.href = '../html/login.html';
   }
+
+  let i = 0;
   // Adiciona email e senha no Local Storage
   let user = {
+    id: ++i,
     email: email,
-    password: password
+    senha: senha
   };
 
   users.push(user);

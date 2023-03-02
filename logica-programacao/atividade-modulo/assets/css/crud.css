@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Helmet', sans-serif;
+    background-color: hsl(148, 100%, 50%);
 }
 
 
@@ -34,16 +35,20 @@ body {
 }
 
 
-#add {
+.editar {
     background-color: hsl(148, 100%, 35%);
     margin-left: 20px;
     color: white;
+    border-width: 1.3px;
     font-size: 30px;
-    border-style: none;
     width: 30px;
     height: inherit;
     cursor: pointer;
-    z-index: 2;
+    
+}
+
+.editar:focus {
+    box-shadow: -2px 2px 0 hsl(148, 100%, 15%);
 }
 
 .botoes {
@@ -57,50 +62,24 @@ body {
     background-color: hsl(148, 100%, 35%);
     color: hsl(0, 0%, 100%);
     font-size: 30px;
+    border-width: 1.3px;
     width: 40px;
     height: 40px;
-    border-style: none;
     cursor: pointer;
     margin-right: 10px;
 }
 
-table {
-    border-radius: 1em;
-    margin-top: 20vh;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: hsl(120, 60%, 50%);
-    box-shadow: 0px 5px 8px green;
-    color: white;
+.botoes button:focus {
+    box-shadow: -2px 1px hsl(148, 100%, 15%);
 }
 
-td, th {
-    padding-left: 7vw;
-    padding-right: 7vw;
-}
 
-td {
-    width: auto;
-    height: auto;
-}
 @media (max-width: 626px) {
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
+    .editar {
+        z-index: 999;
     }
 
-    .menu input {
-        margin: 10px 0;
-        padding: 5px;
-        z-index: 3;
-    }
 
-    .table {
-        width: auto;
-    }
     .botoes {
         position: fixed;
         bottom: 20px;
@@ -108,6 +87,8 @@ td {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
+        z-index: -1;
+
     }          
 
     .botoes button {

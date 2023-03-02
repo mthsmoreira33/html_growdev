@@ -10,17 +10,19 @@
 <body>
   <main class="main">
     <div class="container">
-      <form action="get" class="formulario" id="formularioLogin">
+      <form class="formulario" id="formularioSignup">
         <h1 id="texto">Cadastro</h1>
         <label for="email">Email</label>
-        <input type="email" placeholder="Insira seu email..." required>
+        <input id="email" type="email" placeholder="Insira seu email..." required>
         <label for="senha">Senha</label>
-        <input type="password" placeholder="Insira sua senha" required>
-        <label for="senha">Confirmar Senha</label>
-        <input type="password" placeholder="Insira sua senha" required>
-        <button type="submit" class="botao">Logar</button>
+        <input id="senha" type="password" placeholder="Insira sua senha" required>
+        <label for="confirmarSenha">Confirmar Senha</label>
+        <input id="confirmarSenha" type="password" placeholder="Confirme sua senha" required>
+        <button type="submit" class="botao">Cadastrar</button>
+        <span id="naoCadastrado">Já está cadastrado? <a href="../html/login.html">Clique aqui</a></span>
       </form>
     </div>
   </main>
+  <script src="../js/signup.js"></script>
 </body>
 </html>

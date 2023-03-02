@@ -1,8 +1,5 @@
-let users = JSON.parse(localStorage.getItem('users')) || [];
-// Verifica se email e senha estão no local storage
-let userExiste = users.some(user => user.email === email);
+const estaLogado = !!sessionStorage.getItem('user');
 
-if (!userExiste) {
-    window.location.href = '../html/login.html';
+if(!estaLogado) {
+    window.location.href = '../html/login.html'
 }
-

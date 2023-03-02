@@ -10,13 +10,14 @@
 <body>
   <main class="main">
     <div class="container">
-      <form action="get" class="formulario" id="formularioLogin">
+      <form method="get" class="formulario" id="formularioLogin">
         <h1 id="texto">Login</h1>
         <label for="email">Email</label>
-        <input type="email" placeholder="Insira seu email..." required>
+        <input id="email" type="email" placeholder="Insira seu email..." required>
         <label for="senha">Senha</label>
-        <input type="password" placeholder="Insira sua senha" required>
+        <input id="senha" type="password" placeholder="Insira sua senha" required>
         <button type="submit" class="botao">Logar</button>
+        <span id="naoCadastrado">Não está cadastrado? <a href="../html/signup.html">Clique aqui</a></span>
       </form>
     </div>
   </main>
