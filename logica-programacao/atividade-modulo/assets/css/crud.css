@@ -2,44 +2,46 @@
     margin: 0;
     padding: 0;
     outline: none;
-    font-family:Arial, Helvetica, sans-serif;
 }
 
-#header {
-    background-color: hsl(120, 60%, 50%);
-    width: auto;
-    padding: 10px;
-    box-shadow: 0px 1px 5px 1px hsl(120, 60%, 40%);
+body {
+    font-family: 'Helmet', sans-serif;
 }
 
-.menu input {
-    vertical-align: 50%;
-    margin-left: 30px;
+
+.recado {
+    margin: 10px auto;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 1em;
-    border-style: none;
+    border: 1px solid hsl(148, 100%, 15%);
     height: 20px;
+    display: block;
+    color:hsl(148, 100%, 15%);
 }
 
-.menu input::placeholder {
-    color: hsl(120, 60%, 50%);
+#descricao {
+    width: 90%;
+    height: 100px;
+    resize: none;
 }
 
-.menu input:focus {
-    box-shadow: 0px 3px 8px 1px hsl(120, 60%, 40%);
+.recado::placeholder {
+    color: hsl(148, 100%, 45%);
+}
+
+.recado:focus {
+    box-shadow: -2px 3px hsl(148, 100%, 15%);
 }
 
 
 #add {
-    background-color: hsl(120, 60%, 85%);
+    background-color: hsl(148, 100%, 35%);
     margin-left: 20px;
-    color: hsl(120, 60%, 20%);
+    color: white;
     font-size: 30px;
-    border-radius: 100%;
     border-style: none;
     width: 30px;
-    height: 30px;
+    height: inherit;
     cursor: pointer;
     z-index: 2;
 }
@@ -52,15 +54,14 @@
 }
 
 .botoes button {
-    background-color: hsl(120, 60%, 85%);
-    color: hsl(120, 60%, 20%);
+    background-color: hsl(148, 100%, 35%);
+    color: hsl(0, 0%, 100%);
     font-size: 30px;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     border-style: none;
-    border-radius: 1em;
     cursor: pointer;
-    border-radius: 100%;
+    margin-right: 10px;
 }
 
 table {

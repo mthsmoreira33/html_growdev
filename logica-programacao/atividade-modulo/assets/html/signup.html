@@ -1,42 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Maynard Systems</title>
-    <script src="signup.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
-  </head>
-  <body>
-    <div class="main-box">
-      <div class="left-box">
-        <h1 class="texto">Cadastre-se e comece a anotar seus recados!</h1>
-        <img src="../img/Add tasks-bro.png" alt="" id="imgPagina">
-      </div>
-      <div class="right-box">
-        <form id="form-box">
-          <h1 class="texto">Cadastrar</h1>
-          <div class="text-field">
-            <label for="email" class="texto">Email:</label>
-            <input type="email" id="email" required>
-          </div>
-          <br>
-          <div class="text-field">
-            <label for="password" class="texto">Senha:</label>
-            <input type="password" id="password" required>
-          </div>
-          <br>
-          <div class="text-field">
-            <label for="confirm-password" class="texto">Confirmar Senha:</label>
-            <input type="password" id="confirm-password" required>
-          </div>
-          <br>
-          <button type="submit" id="btn">Cadastrar</button>
-          <div class="texto nao-cadastrado">Já está cadastrado? Clique <a href="login.html">aqui</a> para fazer o login.</div>
-        </form>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="main">
+    <div class="container">
+      <form action="get" class="formulario" id="formularioLogin">
+        <h1 id="texto">Cadastro</h1>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Insira seu email..." required>
+        <label for="senha">Senha</label>
+        <input type="password" placeholder="Insira sua senha" required>
+        <label for="senha">Confirmar Senha</label>
+        <input type="password" placeholder="Insira sua senha" required>
+        <button type="submit" class="botao">Logar</button>
+      </form>
     </div>
-    <script src="../js/signup.js"></script>
-  </body>
+  </main>
+</body>
 </html>
