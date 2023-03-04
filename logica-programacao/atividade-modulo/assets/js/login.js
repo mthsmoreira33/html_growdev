@@ -7,11 +7,11 @@ document.getElementById('formularioLogin').addEventListener('submit', e => {
   let users = JSON.parse(localStorage.getItem('users')) || [];
   // Verifica se email e senha estão no local storage
   let userExiste = users.find(user => user.email === email && user.senha === senha);
-
-  console.log(userExiste.lenght > 0);
   
   if (userExiste) {
     alert('Bem vindo de volta!');
+    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('senha', senha);
     window.location.href = '../html/crud.html';
   } else {
     alert('Email ou senhas incorretos');

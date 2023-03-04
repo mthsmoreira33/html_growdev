@@ -31,6 +31,10 @@ document.getElementById('formularioSignup').addEventListener('submit', e => {
   users.push(user);
   localStorage.setItem('users', JSON.stringify(users));
 
+  // Faz login direto
+  sessionStorage.setItem('email', email);
+  sessionStorage.setItem('senha', senha);
+
   // Redireciona para a página de login
-  window.location.href = '../html/login.html';
+  window.location.href = '../html/crud.html';
 })

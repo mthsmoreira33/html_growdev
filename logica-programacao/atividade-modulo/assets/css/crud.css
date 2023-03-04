@@ -12,8 +12,7 @@ body {
 
 .recado {
     margin: 10px auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 5px 10px;
     border: 1px solid hsl(148, 100%, 15%);
     height: 20px;
     display: block;
@@ -39,9 +38,9 @@ body {
     background-color: hsl(148, 100%, 35%);
     margin-left: 20px;
     color: white;
-    border-width: 1.3px;
+    border-width: 2px;
     font-size: 30px;
-    width: 30px;
+    width: 40px;
     height: inherit;
     cursor: pointer;
     
@@ -62,7 +61,7 @@ body {
     background-color: hsl(148, 100%, 35%);
     color: hsl(0, 0%, 100%);
     font-size: 30px;
-    border-width: 1.3px;
+    border-width: 2px;
     width: 40px;
     height: 40px;
     cursor: pointer;

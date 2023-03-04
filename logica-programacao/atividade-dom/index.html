@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #dadosPessoais input {
+            display: block;
+        }
+        #estado {
+            display: block;
+            width: inherit;
+        }
+        #optionDefault {
+            color: grey;
+        }
+        fieldset {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form id="formulario">
+        <fieldset id="dadosPessoais">
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome</label>
+            <input type="text" placeholder="Digite seu nome" id="nome">
+            <label for="endereco">Endereço</label>
+            <input type="text" placeholder="Digite seu endereço" id="endereco">
+            <label for="cidade">Cidade</label>
+            <input type="text" placeholder="Digite sua cidade" id="cidade">
+            <label for="estado">Estado</label>
+            <select name="estado" id="estado">
+                <option disabled selected value></option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </fieldset>
+        <fieldset id="dadosProfissionais">
+            <legend>Dados Profissionais</legend>
+            <p>Natureza do Cargo</p>
+            <input type="radio" name="cargo" id="gerencia" required checked value="gerencia">
+            <label for="gerencia">Gerência</label>
+            <input type="radio" name="cargo" id="financeiro" value="financeiro">
+            <label for="financeiro">Financeiro</label>
+            <input type="radio" name="cargo" id="recepcao" value="recepcao">
+            <label for="recepcao">Recepção</label>
+            <input type="radio" name="cargo" id="administrativo" value="administrativo">
+            <label for="administrativo">Administrativo</label>
+            <p>Área de interesse</p>
+            <input type="checkbox" name="area" class="area" id="computacao" value="computacao">
+            <label for="computacao">Computação</label>
+            <input type="checkbox" name="area" class="area" id="biologia" value="biologia">
+            <label for="biologia">Biologia</label>
+            <input type="checkbox" name="area" class="area" id="meioAmbiente" value="meioAmbiente">
+            <label for="meioAmbiente">Meio Ambiente</label>
+            <input type="checkbox" name="area" class="area" id="engenharia" value="engenharia">
+            <label for="engenharia">Engenharia</label>
+            <input type="checkbox" name="area" class="area" id="historia" value="historia">
+            <label for="historia">História</label>
+            <p>Mini Currículo</p>
+            <textarea name="miniCurriulo" id="miniCurriculo" cols="30" rows="10" placeholder="Coloque aqui seus objetivos, experiências etc..."></textarea>
+        </fieldset>
+        <button type="submit" id="enviar">Enviar</button>
+        <button type="reset" id="zerar">Zerar</button>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>
