@@ -6,20 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anotações</title>
   <link rel="stylesheet" href="../css/crud.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css'>
 </head>
 <body>
   <main id="campoInput">
     <form id="formulario">
+      <button type="submit" class="menu" id="add">+</button>
+      <div class="wrapper">
+        <button type="button" class="menu" id="zerar"><i class="fi fi-bs-trash"></i></button>
+        <button type="button" class="menu" id="logout"><i class="fi fi-bs-sign-out-alt"></i></i>
+        </button>
+      </div>
       <input type="text" placeholder="Título" class="recado">
       <textarea type="text" placeholder="Descrição" class="recado" id="descricao"></textarea>
-      <button type="submit" class="editar" id="editarTitulo">T</button>
-      <button type="submit" class="editar" id="editarDescricao">D</button>
-      <button type="submit" class="editar" id="apagar">A</button>
-      <div class="botoes">
-        <button type="button" id="add">+</button>
-        <button type="button" id="zerar">-</button>
-        <button type="button" id="logout">L</button>
-      </div>
+      <!--<button type="button" class="editar" id="editarTitulo">T</button>
+      <button type="button" class="editar" id="editarDescricao">D</button>
+      <button type="button" class="editar" id="apagar">A</button> -->
     </form>
   </main>
   <script src="../js/crud.js"></script>

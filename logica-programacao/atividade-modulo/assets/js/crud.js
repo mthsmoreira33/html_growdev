@@ -1,4 +1,4 @@
-const email = sessionStorage.getItem('email');
+/*const email = sessionStorage.getItem('email');
 const senha = sessionStorage.getItem('senha');
 const estaLogado = !!email;
 
@@ -18,4 +18,4 @@ document.getElementById('logout').addEventListener('click', () => {
 
 document.getElementById('zerar').addEventListener('click', () => {
 
-})
+})*/
