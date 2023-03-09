@@ -10,7 +10,7 @@ document.getElementById('formularioSignup').addEventListener('submit', e => {
     alert('Senhas não são iguais!');
     return;
   }
-  
+
   // Verifica se email já foi cadastrado
   let users = JSON.parse(localStorage.getItem('users')) || [];
   let userExiste = users.some(user => user.email === email);
@@ -20,10 +20,8 @@ document.getElementById('formularioSignup').addEventListener('submit', e => {
     window.location.href = '../html/login.html';
   }
 
-  let i = 0;
   // Adiciona email e senha no Local Storage
   let user = {
-    id: ++i,
     email: email,
     senha: senha
   };
