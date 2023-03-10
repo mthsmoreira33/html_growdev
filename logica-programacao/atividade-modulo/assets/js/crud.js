@@ -5,19 +5,48 @@ const estaLogado = !!email;
 const titulo = document.getElementById('titulo');
 const descricao = document.getElementById('descricao');
 let campoInput = document.getElementById('campoInput');
-const recadosLocalStorage = JSON.parse(localStorage.getItem(email));
+const semRecadosP = document.createElement('p');
 
+
+window.onload = () => {
+    carregaRecados()
+}
 
 if (!estaLogado) {
     deslogar();
 }
 
-carregaRecados();
-
 
 document.getElementById('add').addEventListener('click', (e) => {
     e.preventDefault();
-    renderizaRecados();
+    semRecadosP.innerText = '';
+
+    const tituloH1 = document.createElement('h1');
+    const descricaoP = document.createElement('p');
+    const botaoEditarTitulo = document.createElement('button');
+    const botaoEditarRecado = document.createElement('button');
+    const wrapper = documen.getElementById('wrapper');
+    const divRecados = document.createElement('div');
+
+    botaoEditarTitulo.id = 'botaoEditarTitulo';
+    botaoEditarTitulo.innerHTML = `<i class="fi fi-ss-text"></i>`;
+    botaoEditarTitulo.style = 'background-color: hsl(148, 100%, 35%); width: 40px; font-size: 20px; color: hsl(0, 0%, 100%); padding: 5px; margin-right: 5px; margin-left: 5px';
+    botaoEditarTitulo.id = 'botaoEditarTitulo';
+    botaoEditarRecado.innerHTML = `<i class="fi fi-bs-map-marker-edit"></i>`;
+    botaoEditarRecado.style = 'background-color: hsl(148, 100%, 35%); width: 40px; font-size: 20px; color: hsl(0, 0%, 100%); padding: 5px';
+    wrapper.style.display = 'flex';
+    wrapper.style.flexFlow = 'column no-wrap';
+
+    tituloH1.innerText = titulo.value;
+    descricaoP.innerText = descricao.value;
+    tituloH1.style = 'margin: 20px';
+    descricaoP.style = 'margin: 10px';
+    campoInput.appendChild(wrapper);
+    wrapper.appendChild(divRecados)
+    divRecados.appendChild(tituloH1);
+    divRecados.appendChild(descricaoP);
+    divRecados.appendChild(botaoEditarTitulo);
+    divRecados.appendChild(botaoEditarRecado);
 
     const recado = {
         titulo: titulo.value,
@@ -55,45 +84,41 @@ function deslogar() {
     window.location.href = '../html/login.html'
 }
 
-//renderiza os recados
-function renderizaRecados() {
-    const tituloH1 = document.createElement('h1');
-    const descricaoP = document.createElement('p');
-    const botaoEditarTitulo = document.createElement('button');
-    const botaoEditarRecado = document.createElement('button');
-    const wrapper = document.createElement('div');
-    const divRecados = document.createElement('div');
-
-    botaoEditarTitulo.id = 'botaoEditarTitulo';
-    botaoEditarTitulo.innerHTML = `<i class="fi fi-bs-map-marker-edit"></i>`;
-    botaoEditarTitulo.style = 'background-color: hsl(148, 100%, 35%); width: 40px; font-size: 20px; color: hsl(0, 0%, 100%); padding: 5px; margin-right: 5px; margin-left: 5px';
-    botaoEditarTitulo.id = 'botaoEditarTitulo';
-    botaoEditarRecado.innerHTML = `<i class="fi fi-bs-map-marker-edit"></i>`;
-    botaoEditarRecado.style = 'background-color: hsl(148, 100%, 35%); width: 40px; font-size: 20px; color: hsl(0, 0%, 100%); padding: 5px';
-    wrapper.style.display = 'flex';
-    wrapper.style.flexFlow = 'column no-wrap';
-
-    tituloH1.innerText = titulo.value;
-    descricaoP.innerText = descricao.value;
-    tituloH1.style = 'margin: 20px';
-    descricaoP.style = 'margin: 10px';
-    campoInput.appendChild(wrapper);
-    wrapper.appendChild(divRecados)
-    divRecados.appendChild(tituloH1);
-    divRecados.appendChild(descricaoP);
-    divRecados.appendChild(botaoEditarTitulo);
-    divRecados.appendChild(botaoEditarRecado);
-}
-
 function carregaRecados() {
-    if (recadosLocalStorage && recadosLocalStorage.length > 0) {
-        recadosLocalStorage.forEach((recado) => {
-            renderizaRecados();
-        });
+    const recadosLocalStorage = JSON.parse(localStorage.getItem(email));
+    if (recadosLocalStorage === null || recadosLocalStorage === undefined) {
+        semRecadosP.innerText = 'Adicione seus recados';
+        campoInput.appendChild(semRecadosP);
+        semRecadosP.style = 'text-align: center; font-size: 25px';
         return;
     }
 
-    const semRecadosP = document.createElement('p');
-    semRecadosP.innerText = 'Adicione seus recados';
-    campoInput.appendChild(semRecadosP);
+    recadosLocalStorage.forEach((rec) => {
+        const tituloH1 = document.createElement('h1');
+        const descricaoP = document.createElement('p');
+        const botaoEditarTitulo = document.createElement('button');
+        const botaoEditarRecado = document.createElement('button');
+        const wrapper = document.getElementById('wrapper');
+        const divRecados = document.createElement('div');
+
+        botaoEditarTitulo.id = 'botaoEditarTitulo';
+        botaoEditarTitulo.innerHTML = `<i class="fi fi-bs-map-marker-edit"></i>`;
+        botaoEditarTitulo.style = 'background-color: hsl(148, 100%, 35%); width: 40px; font-size: 20px; color: hsl(0, 0%, 100%); padding: 5px; margin-right: 5px; margin-left: 5px';
+        botaoEditarTitulo.id = 'botaoEditarTitulo';
+        botaoEditarRecado.innerHTML = `<i class="fi fi-note"></i>`;
+        botaoEditarRecado.style = 'background-color: hsl(148, 100%, 35%); width: 40px; font-size: 20px; color: hsl(0, 0%, 100%); padding: 5px';
+        wrapper.style.display = 'flex';
+        wrapper.style.flexFlow = 'column no-wrap';
+
+        tituloH1.innerText = rec.titulo;
+        descricaoP.innerText = rec.descricao;
+        tituloH1.style = 'margin: 20px';
+        descricaoP.style = 'margin: 10px';
+        campoInput.appendChild(wrapper);
+        wrapper.appendChild(divRecados)
+        divRecados.appendChild(tituloH1);
+        divRecados.appendChild(descricaoP);
+        divRecados.appendChild(botaoEditarTitulo);
+        divRecados.appendChild(botaoEditarRecado);
+    });
 }
