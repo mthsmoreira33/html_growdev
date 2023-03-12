@@ -12,11 +12,14 @@ const recado = {
   descricao: "",
 };
 
+//verifica se o usuário está logado, caso não estiver, redireciona para página de login
 if (!estaLogado) {
   window.location.href = "../html/login.html";
 }
 
-const recadosLocalStorage = JSON.parse(localStorage.getItem(email) || "[]");
+let recadosLocalStorage = JSON.parse(localStorage.getItem(email) || "[]");
+
+//Verifica se o localStorage tem algum recado, caso não tenha, escreve "Adicione seus recados"
 if (recadosLocalStorage == 0) {
   semRecadosP.innerText = "Adicione seus recados";
   campoInput.appendChild(semRecadosP);
@@ -63,6 +66,7 @@ if (recadosLocalStorage == 0) {
   });
 }
 
+//Adiciona recado
 document.getElementById("add").addEventListener("click", (e) => {
     e.preventDefault();
     semRecadosP.innerText = "";
@@ -108,9 +112,7 @@ document.getElementById("add").addEventListener("click", (e) => {
     divRecados.appendChild(apagar);
     recado.titulo = tituloH1.innerText;
     recado.descricao = descricaoP.innerText;
-    const recadosLocalStorage = JSON.parse(localStorage.getItem(email)) || [];
 
-    // Get the new data to be added
     const novoRecado = {
         titulo: titulo.value,
         descricao: descricao.value,
@@ -120,25 +122,6 @@ document.getElementById("add").addEventListener("click", (e) => {
     localStorage.setItem(email, JSON.stringify(recadosLocalStorage));
 });
 
-//deleta todos elementos da página
-document.getElementById("zerar").addEventListener("click", () => {
-  const confirmar = confirm("Deseja MESMO deletar tudo?");
-  if (confirmar) {
-    const tituloH1 = document.querySelectorAll("h1");
-    const descricaoP = document.querySelectorAll("p");
-    const botoesEditarTitulo = document.querySelectorAll("#botaoEditarTitulo");
-    const botoesEditarRecados = document.querySelectorAll("#botaoEditarRecado")
-    const wrapper = document.querySelectorAll("#wrapper")
-    tituloH1.forEach((element) => element.remove());
-    descricaoP.forEach((element) => element.remove());
-    botoesEditarTitulo.forEach((element) => element.remove());
-    botoesEditarRecados.forEach((element) => element.remove());
-    wrapper.forEach((element) => element.innerHTML = '');
-    return;
-  }
-  alert("Operação Cancelada");
-});
-
 //desloga o usuário
 document.getElementById("logout").addEventListener("click", () => {
   sessionStorage.clear();
@@ -146,6 +129,7 @@ document.getElementById("logout").addEventListener("click", () => {
 });
 
 
+//edita o título do recado
 function editarTitulo(e) {
     const button = e.target;
     const parent = button.parentNode;
@@ -154,12 +138,12 @@ function editarTitulo(e) {
     if (novoTitulo) {
         h1.innerText = novoTitulo;
         const index = Array.from(parent.parentNode.children).indexOf(parent);
-        const recadosLocalStorage = JSON.parse(localStorage.getItem(email)) || [];
         recadosLocalStorage[index].titulo = novoTitulo;
         localStorage.setItem(email, JSON.stringify(recadosLocalStorage));
     }
 }
 
+//edita a descrição do recado
 function editarRecado(e) {
   const button = e.target;
   const parent = button.parentNode;
@@ -168,12 +152,12 @@ function editarRecado(e) {
   if (novoRecado) {
       p.innerText = novoRecado;
       const index = Array.from(parent.parentNode.children).indexOf(parent);
-      const recadosLocalStorage = JSON.parse(localStorage.getItem(email)) || [];
       recadosLocalStorage[index].descricao = novoRecado;
       localStorage.setItem(email, JSON.stringify(recadosLocalStorage));
   }
 }
 
+//apaga o recado
 function apagarRecado(e) {
   const confirmar = confirm("Deseja apagar o recado?");
   if (confirmar) {
@@ -181,14 +165,8 @@ function apagarRecado(e) {
     const parent = botao.parentNode;
     const index = Array.from(parent.parentNode.children).indexOf(parent);
     parent.remove();
-
-    // Get the items from localStorage as an array
-    let items = JSON.parse(localStorage.getItem("recados")) || [];
-
-    // Remove the item at the specified index
-    items.splice(index, 1);
-
-    // Save the updated array back to localStorage
-    localStorage.setItem("recados", JSON.stringify(items));
+    recadosLocalStorage.splice(index, 1); // remove the recado from the array
+    localStorage.setItem(email, JSON.stringify(recadosLocalStorage)); // update localStorage
   }
 }
+

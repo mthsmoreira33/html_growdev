@@ -1,4 +1,3 @@
-//signup.html
 document.getElementById('formularioSignup').addEventListener('submit', e => {
   // Armazena valores do signup
   e.preventDefault();
