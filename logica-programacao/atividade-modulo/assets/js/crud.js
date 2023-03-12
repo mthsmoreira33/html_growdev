@@ -120,6 +120,9 @@ document.getElementById("add").addEventListener("click", (e) => {
 
     recadosLocalStorage.push(novoRecado);
     localStorage.setItem(email, JSON.stringify(recadosLocalStorage));
+
+    titulo.value = '';
+    descricao.value = '';
 });
 
 //desloga o usuário
@@ -165,8 +168,15 @@ function apagarRecado(e) {
     const parent = botao.parentNode;
     const index = Array.from(parent.parentNode.children).indexOf(parent);
     parent.remove();
-    recadosLocalStorage.splice(index, 1); // remove the recado from the array
-    localStorage.setItem(email, JSON.stringify(recadosLocalStorage)); // update localStorage
+    recadosLocalStorage.splice(index, 1);
+    localStorage.setItem(email, JSON.stringify(recadosLocalStorage));
+    if (recadosLocalStorage == 0) {
+      semRecadosP.innerText = "Adicione seus recados";
+      campoInput.appendChild(semRecadosP);
+      semRecadosP.style = "text-align: center; font-size: 25px";
+    }
+    return;
   }
+  alert("Operação cancelada.")
 }
 
